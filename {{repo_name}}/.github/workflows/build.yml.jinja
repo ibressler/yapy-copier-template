@@ -15,7 +15,7 @@ jobs:
         os: ['ubuntu-latest']
     steps:
 
-      {{ ci.checkout() }}
+      {{ ci.checkout(ref="${{ github.ref }}") }}
 
       {{ ci.setup_python() }}
 

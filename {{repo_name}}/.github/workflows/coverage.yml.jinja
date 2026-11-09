@@ -18,7 +18,7 @@ jobs:
       total: {{ '${{ steps.total.outputs.total }}' }}
     steps:
 
-      {{ ci.checkout() }}
+      {{ ci.checkout(ref="${{ github.ref }}") }}
 
       {{ ci.setup_python() }}
 

@@ -30,7 +30,7 @@ jobs:
     name: {{'"Test py-${{ join(matrix.python, \'.\') }} (${{ matrix.os }})"'}}
     steps:
 
-      {{ ci.checkout(depth=0) }}
+      {{ ci.checkout(depth=0, ref="${{ github.ref }}") }}
 
       {{ ci.setup_python(arch='${{ matrix.python_arch }}', py='${{ env.PYTHON }}') }}
 

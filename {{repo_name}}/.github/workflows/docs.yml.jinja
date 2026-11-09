@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      {{ ci.checkout(depth=0) }}
+      {{ ci.checkout(depth=0, ref="${{ github.ref }}") }}
 
       {{ ci.setup_python() }}
 

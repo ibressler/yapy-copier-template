@@ -15,7 +15,7 @@ jobs:
     steps:
 
       # depth=0 is needed for semantic-release
-      {{ ci.checkout(depth=0) }}
+      {{ ci.checkout(depth=0, ref="${{ github.ref }}") }}
 
       - name: Setup git user
         shell: sh
