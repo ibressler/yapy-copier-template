@@ -26,6 +26,16 @@ Yet Another Python [Copier][1] template for a Python modules and applications fo
         git remote add <URL of the repository>
         git push origin --set-upstream main
 
+### Update when this template changed
+
+    copier update --trust -A .
+
+### Recopy some files if update does not touch them
+
+Work on the `.github` subfolder only, for example:
+
+    copier recopy --trust -A --exclude '*' --exclude '!.github' .
+
 ## Publishing documentation
 
 For the target repository where this template was applied on, first create an empty `gh-pages` branch for publishing. This is how to make an orphan branch with no history and no files initially:
