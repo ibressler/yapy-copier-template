@@ -28,13 +28,13 @@ Yet Another Python [Copier][1] template for a Python modules and applications fo
 
 ### Update when this template changed
 
-    copier update --trust -A .
+    copier update --trust -A --vcs-ref=HEAD .
 
 ### Recopy some files if update does not touch them
 
 Work on the `.github` subfolder only, for example:
 
-    copier recopy --trust -A --exclude '*' --exclude '!.github' .
+    copier recopy --trust -A --vcs-ref=HEAD --exclude '*' --exclude '!.github' .
 
 ## Publishing documentation
 
